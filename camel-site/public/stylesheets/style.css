@@ -1,0 +1,29 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00B7FF; }
+
+.camel-container {
+  width: 700px; }
+  .camel-container button {
+    min-width: 100%; }
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+
+.camel-item {
+  padding: 0 2rem;
+  text-align: center; }
+  .camel-item h2 {
+    text-transform: capitalize; }
+  .camel-item p {
+    margin-bottom: 0; }
+  .camel-item input[type=number] {
+    width: 5rem;
+    margin: 0 auto; }
+
+/*# sourceMappingURL=style.css.map */

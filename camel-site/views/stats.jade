@@ -1,0 +1,15 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+
+	div.camel-container
+		div.flex-container
+			- each stat in stats
+				div.camel-item
+					h2 #{stat.color}
+					p 1st
+						span #{stat.firsts}
+					p 2nd
+						span #{stat.seconds}

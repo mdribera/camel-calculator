@@ -1,0 +1,23 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+
+	div.camel-container
+		form(name="camel-calculator", action="/stats", method="post")
+				div.flex-container
+					- each camel in camels
+						div.camel-item
+							h2 #{camel.color}
+							div.form-group
+								label(for="#{camel.color}-space") Space?
+								input.form-control(min="0" value="0" id="#{camel.color}-space" type="number", name="#{camel.color}-space")
+							div.form-group
+								label(for="#{camel.color}-stack") Stack?
+								input.form-control(min="0" max="5" value="0" id="#{camel.color}-stack" type="number", name="#{camel.color}-stack")
+							div.form-group.form-check
+								label.form-check-label
+									input.form-check-input(id="#{camel.color}-rolled" type="checkbox", name="#{camel.color}-rolled")
+									|  Rolled?
+					button.btn.btn-primary(type="submit") Calculate
