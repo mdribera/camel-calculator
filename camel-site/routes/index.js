@@ -3,7 +3,6 @@ var router = express.Router();
 var calculator = require('../helpers/camel-up')
 
 
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	var camels = [
@@ -37,13 +36,13 @@ router.post('/stats', function(req, res, next) {
 
 	console.log('camels', camels);
 
-	// var results;
-	// setTimeout(function() {
-	// 	results = 
+	var results;
+	setTimeout(function() {
+		results = calculator.calculateOdds(camels)
 
-	// 	console.log('stats', results);
-	// }, 0);
-	res.render('stats', { title: 'The Camel Stats', stats: calculator.calculateOdds(camels) })
+		console.log('stats', results);
+		res.render('stats', { title: 'The Camel Stats', stats: results })
+	}, 1);
 
 });
 

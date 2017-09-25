@@ -1,38 +1,43 @@
 {
-	"same-space": {
+	"sample-situation": {
 		"camels": [
 			{
 				"color": "red",
-				"space": 0,
-				"stack": 4,
+				"space": 2,
+				"stack": 1,
 				"rolled": false
 			},
 			{
 				"color": "green",
-				"space": 0,
+				"space": 2,
 				"stack": 3,
 				"rolled": false
 			},
 			{
 				"color": "blue",
-				"space": 0,
+				"space": 2,
 				"stack": 2,
 				"rolled": false
 			},
 			{
 				"color": "white",
-				"space": 0,
-				"stack": 1,
-				"rolled": true
+				"space": 2,
+				"stack": 0,
+				"rolled": false
 			},
 			{
 				"color": "yellow",
-				"space": 0,
+				"space": 3,
 				"stack": 0,
-				"rolled": true
+				"rolled": false
 			}
 		]
 	},
+
+	"rolls": [
+		{"color": "yellow", "num": 2},
+		{"color": "white", "num": 3}
+	],
 
 	"spread-out": {
 		"camels": [
