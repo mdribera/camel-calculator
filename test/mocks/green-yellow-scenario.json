@@ -1,0 +1,182 @@
+[
+  [
+    {
+      "color": "green",
+      "number": 1
+    },
+    {
+      "color": "yellow",
+      "number": 1
+    }
+  ],
+  [
+    {
+      "color": "green",
+      "number": 1
+    },
+    {
+      "color": "yellow",
+      "number": 2
+    }
+  ],
+  [
+    {
+      "color": "green",
+      "number": 1
+    },
+    {
+      "color": "yellow",
+      "number": 3
+    }
+  ],
+  [
+    {
+      "color": "green",
+      "number": 2
+    },
+    {
+      "color": "yellow",
+      "number": 1
+    }
+  ],
+  [
+    {
+      "color": "green",
+      "number": 2
+    },
+    {
+      "color": "yellow",
+      "number": 2
+    }
+  ],
+  [
+    {
+      "color": "green",
+      "number": 2
+    },
+    {
+      "color": "yellow",
+      "number": 3
+    }
+  ],
+  [
+    {
+      "color": "green",
+      "number": 3
+    },
+    {
+      "color": "yellow",
+      "number": 1
+    }
+  ],
+  [
+    {
+      "color": "green",
+      "number": 3
+    },
+    {
+      "color": "yellow",
+      "number": 2
+    }
+  ],
+  [
+    {
+      "color": "green",
+      "number": 3
+    },
+    {
+      "color": "yellow",
+      "number": 3
+    }
+  ],
+  [
+    {
+      "color": "yellow",
+      "number": 1
+    },
+    {
+      "color": "green",
+      "number": 1
+    }
+  ],
+  [
+    {
+      "color": "yellow",
+      "number": 1
+    },
+    {
+      "color": "green",
+      "number": 2
+    }
+  ],
+  [
+    {
+      "color": "yellow",
+      "number": 1
+    },
+    {
+      "color": "green",
+      "number": 3
+    }
+  ],
+  [
+    {
+      "color": "yellow",
+      "number": 2
+    },
+    {
+      "color": "green",
+      "number": 1
+    }
+  ],
+  [
+    {
+      "color": "yellow",
+      "number": 2
+    },
+    {
+      "color": "green",
+      "number": 2
+    }
+  ],
+  [
+    {
+      "color": "yellow",
+      "number": 2
+    },
+    {
+      "color": "green",
+      "number": 3
+    }
+  ],
+  [
+    {
+      "color": "yellow",
+      "number": 3
+    },
+    {
+      "color": "green",
+      "number": 1
+    }
+  ],
+  [
+    {
+      "color": "yellow",
+      "number": 3
+    },
+    {
+      "color": "green",
+      "number": 2
+    }
+  ],
+  [
+    {
+      "color": "yellow",
+      "number": 3
+    },
+    {
+      "color": "green",
+      "number": 3
+    }
+  ]
+]

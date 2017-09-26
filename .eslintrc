@@ -1,0 +1,21 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb-base",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "mocha": true
+  },
+  "rules": {
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "global-require": 0,
+    "import/no-dynamic-require": 0,
+    "arrow-body-style": ["error", "always"]
+  }
+}

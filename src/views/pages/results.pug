@@ -1,0 +1,50 @@
+extends default.pug
+
+block content
+  .content
+    form(method='POST', action='/')
+      h2 Camels 4 Lyfe
+      .camel-configuration
+        each color in colors
+          - var camel = camels ? camels[color] : undefined;
+          .camel-item
+            .rolled
+              - var colorRolled = `${color}.rolled`;
+              label(for=colorRolled)= `${color} rolled?`
+              input(
+                name=colorRolled
+                type='checkbox'
+                value='true'
+                checked=(undefined === camel ? false : camel.rolled)
+                id=colorRolled)
+            .space
+              - var colorSpace = `${color}.space`;
+              label(for=colorSpace)= `${color} space?`
+              input(
+                name=colorSpace
+                type='number'
+                min='0'
+                value=(undefined === camel ? '' : camel.space)
+                id=colorSpace)
+            .stack
+              - var colorStack = `${color}.stack`;
+              label(for=colorStack)= `${color} stack?`
+              input(
+                name=colorStack
+                type='number'
+                min='0'
+                value=(undefined === camel ? '' : camel.stack)
+                id=colorStack)
+      button(type='submit') Calculate it!
+    if camels
+      h3 MATH
+      .math= `(3^${dice})*(${dice}!)`
+      h3 ROLL POSSIBILITIES
+      .possibilities= count
+      h3 WINNERS
+      .winners
+        each winner, wcolor in winners
+          .winner
+            h4= wcolor
+            p= `Firsts: ${winner.firsts} (${winner.firstPercent}%)`
+            p= `Seconds: ${winner.seconds} (${winner.secondPercent}%)`
