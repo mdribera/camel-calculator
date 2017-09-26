@@ -2,27 +2,16 @@
   "name": "camel-calculator",
   "version": "1.0.0",
   "description": "A Camel Up probability calculator designed to ruin fun.",
-  "main": "src/server.js",
+  "main": "dist/index.js",
   "scripts": {
+    "build": "npm run clean && mkdir -p dist && babel src -s -D -d dist",
+    "clean": "rimraf dist",
+    "dev": "nodemon --exec babel-node --watch src -e js,json,pug,html,css src/index.js",
+    "lint": "npm-run-all lint:*",
     "lint:es": "eslint src",
     "lint:pug": "pug-lint src",
-    "lint": "npm-run-all lint:*",
-    "start:dev": "nodemon --exec babel-node --watch src -e js,json,pug,html,css src/server.js",
-    "start": "npm run start:dev",
+    "start": "node dist/index.js",
     "test": "mocha test/**/*.spec.js --compilers js:babel-register"
-  },
-  "dependencies": {
-    "body-parser": "^1.18.2",
-    "chai": "^4.1.2",
-    "chalk": "^2.1.0",
-    "dotenv": "^4.0.0",
-    "ejs": "^2.5.7",
-    "express": "4.14.0",
-    "gulp-messenger": "0.25.3",
-    "livereload": "^0.6.2",
-    "lodash": "4.17.2",
-    "mongoose": "^4.11.13",
-    "pug": "^2.0.0-rc.4"
   },
   "repository": {
     "type": "git",
@@ -51,11 +40,19 @@
   },
   "author": "Mark Ribera <markdribera@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "6.18.2",
-    "babel-eslint": "^8.0.0",
     "babel-preset-env": "^1.6.0",
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "express": "4.14.0",
+    "lodash": "4.17.2",
+    "pug": "^2.0.0-rc.4",
+    "rimraf": "^2.6.2"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.0",
+    "babel-register": "^6.26.0",
     "eslint": "^4.7.1",
     "eslint-config-airbnb-base": "^12.0.0",
     "eslint-plugin-import": "^2.7.0",

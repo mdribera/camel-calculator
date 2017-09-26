@@ -1,17 +1,10 @@
-const express = require('express');
+import express from 'express';
+import path from 'path';
+import bodyParser from 'body-parser';
+
+import routes from './routes';
 
 const app = express();
-
-const path = require('path');
-
-const bodyParser = require('body-parser');
-
-const msg = require('gulp-messenger');
-
-const chalk = require('chalk');
-
-const _ = require('lodash');
-
 
 if (process.env.NODE_ENV !== 'production') {
   require('dotenv').load();
@@ -39,13 +32,22 @@ app.use(bodyParser.urlencoded({
 app.use(express.static(path.resolve(__dirname, 'public')));
 
 // Deal with the requests
-app.all('/', require('./routes'));
+app.all('/', routes);
 
-// lets startup this puppy
-app.listen(app.get('port'), () => {
-  msg.log('\n');
-  msg.log(chalk.cyan(`Server Started ${new Date()}`));
-  msg.log('\n');
-  const serverInfo = chalk.yellow(`http://localhost:${app.get('port')}`);
-  msg.success('=', _.pad(`Application Running On: ${serverInfo}`, 80), '=');
+// Catch 404 and forward to error handler
+app.use((req, res, next) => {
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
+
+// Error handler
+app.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
+  res
+    .status(err.status || 500)
+    .render('error', {
+      message: err.message,
+    });
+});
+
+export default app;

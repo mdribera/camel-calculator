@@ -1,11 +1,11 @@
 import _ from 'lodash';
 
-import constants from '../helpers/constants';
-import requestMapper from '../helpers/request-mapper';
-import orderPermuter from '../helpers/order-permuter';
-import diceRoller from '../helpers/dice-roller';
-import possibilityCombiner from '../helpers/possibility-combiner';
-import winsCalculator from '../helpers/wins-calculator';
+import constants from './helpers/constants';
+import requestMapper from './helpers/request-mapper';
+import orderPermuter from './helpers/order-permuter';
+import diceRoller from './helpers/dice-roller';
+import possibilityCombiner from './helpers/possibility-combiner';
+import winsCalculator from './helpers/wins-calculator';
 
 const router = require('express').Router();
 
