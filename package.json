@@ -38,6 +38,9 @@
     "permutation",
     "algorithm"
   ],
+  "engines": {
+    "node": "7.5.0"
+  },
   "babel": {
     "presets": [
       "env"
