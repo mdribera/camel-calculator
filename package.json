@@ -10,7 +10,7 @@
     "lint": "npm-run-all lint:*",
     "lint:es": "eslint src",
     "lint:pug": "pug-lint src",
-    "start": "node dist/index.js",
+    "start": "npm run build && node dist/index.js",
     "test": "mocha test/**/*.spec.js --compilers js:babel-register"
   },
   "repository": {
