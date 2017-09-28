@@ -1,6 +1,7 @@
 import _ from 'lodash';
 
 import constants from './helpers/constants';
+import queryMapper from './helpers/query-mapper';
 import requestMapper from './helpers/request-mapper';
 import orderPermuter from './helpers/order-permuter';
 import diceRoller from './helpers/dice-roller';
@@ -11,10 +12,13 @@ const router = require('express').Router();
 
 router.route('/')
   .get((req, res) => {
+    const camelConfiguration = queryMapper(req.query);
+
     res.render(
       'pages/results',
       {
         colors: constants.COLORS,
+        camels: _.keyBy(camelConfiguration, 'color'),
       },
     );
   })
