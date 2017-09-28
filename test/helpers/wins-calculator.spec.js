@@ -7,7 +7,7 @@ import winsCalculator from '../../src/helpers/wins-calculator';
 
 const mockCamels = [
   {
-    color: 'red', space: 1, stack: 0,
+    color: 'orange', space: 1, stack: 0,
   },
   {
     color: 'green', space: 1, stack: 1,
@@ -36,7 +36,7 @@ describe('winsCalculator', () => {
       assert.deepEqual(
         result,
         {
-          red: { firsts: 0, seconds: 0 },
+          orange: { firsts: 0, seconds: 0 },
           green: { firsts: 0, seconds: 0 },
           blue: { firsts: 3, seconds: 0 },
           white: { firsts: 0, seconds: 3 },
@@ -56,7 +56,7 @@ describe('winsCalculator', () => {
       assert.deepEqual(
         result,
         {
-          red: { firsts: 0, seconds: 0 },
+          orange: { firsts: 0, seconds: 0 },
           green: { firsts: 5, seconds: 8 },
           blue: { firsts: 1, seconds: 7 },
           white: { firsts: 0, seconds: 0 },
